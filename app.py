@@ -41,8 +41,9 @@ footer = """
             width: 100%;
             background-color: rgb(14, 17, 23);
             text-align: center;
-            padding: 10px;
-            font-size: 12px;
+            padding: 2px;
+            font-size: 4px;
+            height: 5vh;
         }
     </style>
     <div class="footer">
