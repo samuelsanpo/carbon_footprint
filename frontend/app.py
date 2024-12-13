@@ -41,8 +41,8 @@ footer = """
             width: 100%;
             background-color: rgb(14, 17, 23);
             text-align: center;
-            padding: 2px;
-            font-size: 4px;
+            padding: 5px;
+            font-size: 10px;
             height: 5vh;
         }
     </style>

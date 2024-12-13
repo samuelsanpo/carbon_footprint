@@ -7,99 +7,58 @@ def show():
     # Initialize session state for storing form data
     if "form_data" not in st.session_state:
         st.session_state.form_data = {
-            "org_type": "General",
             "org_name": "",
             "industry": "Select an option",
             "employees": 0,
             "electricity": 0.0,
-            "fuel_heating": 0.0,
-            "fuel_type": "Select an option",
-            "company_vehicles": 0,
-            "vehicle_fuel": 0.0,
-            "commute_distance": 0.0,
-            "industrial_process": "",
-            "process_emissions": 0.0,
-            "purchased_goods": "",
-            "transport_distance": 0.0,
-            "freight_type": "Select an option",
-            "tree_planting": 0,
-            "carbon_credits": 0.0,
-            "water_usage": 0.0,
-            "effluents": 0.0,
-            "treatment_method": "None"
+            "natural_gas": 0.0,
+            "fuel": 0.0,
+            "waste": 0.0,
+            "waste_recycled": 0.0,
+            "kilometers": 0.0,
+            "efficiency": 0.0
         }
 
-    # Organization type selection
-    org_type = st.selectbox(
-        "Select the type of your organization:",
-        ["General", "Industrial", "Service", "Other"],
-        index=["General", "Industrial", "Service", "Other"].index(st.session_state.form_data["org_type"])
-    )
-
-    st.session_state.form_data["org_type"] = org_type
 
     # General Information Section
     st.header("General Information")
     st.session_state.form_data["org_name"] = st.text_input("Organization Name", value=st.session_state.form_data["org_name"])
     st.session_state.form_data["industry"] = st.selectbox(
         "Industry Sector", 
-        ["Select an option", "Manufacturing", "Retail", "IT Services", "Other"], 
-        index=["Select an option", "Manufacturing", "Retail", "IT Services", "Other"].index(st.session_state.form_data["industry"])
+        ["Select an option", "Manufacturing", "Retail", "IT Services", "Financial Services", "Logistic", "Other"], 
+        index=["Select an option", "Manufacturing", "Retail", "IT Services", "Financial Services", "Logistic", "Other"].index(st.session_state.form_data["industry"])
     )
     st.session_state.form_data["employees"] = st.number_input("Number of Employees", min_value=0, value=st.session_state.form_data["employees"], step=1)
 
-    # Energy Consumption Section (conditional on organization type)
-    st.header("Energy Consumption")
-    st.session_state.form_data["electricity"] = st.number_input("Electricity consumption (kWh per month):", min_value=0.0, value=st.session_state.form_data["electricity"])
-    st.session_state.form_data["fuel_heating"] = st.number_input("Fuel consumption for heating (liters or m³):", min_value=0.0, value=st.session_state.form_data["fuel_heating"])
-    st.session_state.form_data["fuel_type"] = st.selectbox("Fuel type", ["Select an option", "Natural gas", "Diesel", "Propane", "Other"], index=["Select an option", "Natural gas", "Diesel", "Propane", "Other"].index(st.session_state.form_data["fuel_type"]))
+    # Energy usage Section 
+    st.header("Energy usage")
+    st.session_state.form_data["electricity"] = st.number_input("Average monthly electricity bill in euros (€):", min_value=0.0, step= 0.1, format="%.2f", value=st.session_state.form_data["electricity"])
+    st.session_state.form_data["natural_gas"] = st.number_input("Average monthly natural gas bill in euros (€):", min_value=0.0, step= 0.1, format="%.2f",value=st.session_state.form_data["natural_gas"])
+    st.session_state.form_data["fuel"] = st.number_input("Average monthly transportation fuel bil in euros (€):", min_value=0.0, step= 0.1, format="%.2f",value=st.session_state.form_data["fuel"])
 
-    # Transportation Section
-    st.header("Transportation")
-    st.session_state.form_data["company_vehicles"] = st.number_input("Company-owned vehicles (number):", min_value=0, value=st.session_state.form_data["company_vehicles"])
-    st.session_state.form_data["vehicle_fuel"] = st.number_input("Average fuel consumption of vehicles (liters per month):", min_value=0.0, value=st.session_state.form_data["vehicle_fuel"])
-    st.session_state.form_data["commute_distance"] = st.number_input("Employee commute distance (km per week):", min_value=0.0, value=st.session_state.form_data["commute_distance"])
+    # Waste Section
+    st.header("Waste")
+    st.session_state.form_data["waste"] = st.number_input("Waste generated per month in kilograms (kg):", min_value=0.0, step=0.1, format="%.1f", value=st.session_state.form_data["waste"])
+    st.session_state.form_data["waste_recycled"] = st.number_input("Waste recycled or composted per month (percentage %)", min_value=0.0, max_value=100.0, step=0.1, format="%.1f", value=st.session_state.form_data["waste_recycled"])
 
-    # Industrial Processes Section (conditional on organization type)
-    if org_type == "Industrial":
-        st.header("Industrial Processes")
-        st.session_state.form_data["industrial_process"] = st.text_input("Describe the processes that generate emissions (if any):", value=st.session_state.form_data["industrial_process"])
-        st.session_state.form_data["process_emissions"] = st.number_input("Estimated annual emissions from processes (metric tons CO₂):", min_value=0.0, value=st.session_state.form_data["process_emissions"])
+    # Business travel
+    st.header("Business travel")
+    st.session_state.form_data["kilometers"] = st.number_input("Kilometers your employees travel for business purposes per year (km):", min_value=0.0, step=0.1, format="%.1f", value=st.session_state.form_data["kilometers"])
+    st.session_state.form_data["efficiency"] = st.number_input("Average fuel consumption of vehicles used for business travel per 100 kilometers in liters (l) :", min_value=0.0, format="%.1f", step=0.1,  value=st.session_state.form_data["efficiency"])
 
-    # Supply Chain Section (conditional on organization type)
-    if org_type in ["General", "Industrial"]:
-        st.header("Supply Chain and Purchases")
-        st.session_state.form_data["purchased_goods"] = st.text_area("Describe the main goods or services purchased:", value=st.session_state.form_data["purchased_goods"])
-        st.session_state.form_data["transport_distance"] = st.number_input("Average distance for transporting purchased goods (km):", min_value=0.0, value=st.session_state.form_data["transport_distance"])
-        st.session_state.form_data["freight_type"] = st.selectbox("Type of transport:", ["Select an option", "Truck", "Ship", "Airplane", "Other"], index=["Select an option", "Truck", "Ship", "Airplane", "Other"].index(st.session_state.form_data["freight_type"]))
-
-    # Offset Activities Section
-    st.header("Carbon Offset Activities")
-    st.session_state.form_data["tree_planting"] = st.number_input("Number of trees planted annually:", min_value=0, value=st.session_state.form_data["tree_planting"], step=1)
-    st.session_state.form_data["carbon_credits"] = st.number_input("Carbon credits purchased (metric tons CO₂):", min_value=0.0, value=st.session_state.form_data["carbon_credits"])
-
-    # Water and Effluents Section (conditional on organization type)
-    if org_type in ["Industrial", "Other"]:
-        st.header("Water and Effluents")
-        st.session_state.form_data["water_usage"] = st.number_input("Monthly water consumption (liters or m³):", min_value=0.0, value=st.session_state.form_data["water_usage"])
-        st.session_state.form_data["effluents"] = st.number_input("Monthly effluents generated (liters or m³):", min_value=0.0, value=st.session_state.form_data["effluents"])
-        st.session_state.form_data["treatment_method"] = st.selectbox("Effluent treatment method:", ["None", "Primary", "Secondary", "Tertiary"], index=["None", "Primary", "Secondary", "Tertiary"].index(st.session_state.form_data["treatment_method"]))
 
     # Validate if all required fields are completed
     is_complete = (
-        st.session_state.form_data["org_name"]
-        and st.session_state.form_data["industry"] != "Select an option"
-        and st.session_state.form_data["employees"] > 0
-        and st.session_state.form_data["electricity"] > 0
-        and st.session_state.form_data["fuel_heating"] >= 0
-        and st.session_state.form_data["fuel_type"] != "Select an option"
-        and st.session_state.form_data["company_vehicles"] >= 0
-        and st.session_state.form_data["vehicle_fuel"] >= 0
-        and st.session_state.form_data["commute_distance"] >= 0
-        and (org_type != "Industrial" or st.session_state.form_data["industrial_process"] and st.session_state.form_data["process_emissions"] >= 0)
-        and (org_type in ["General", "Industrial"] or st.session_state.form_data["purchased_goods"] and st.session_state.form_data["transport_distance"] >= 0 and st.session_state.form_data["freight_type"] != "Select an option")
-        and st.session_state.form_data["tree_planting"] >= 0 and st.session_state.form_data["carbon_credits"] >= 0
-        and (org_type in ["Industrial", "Other"] or st.session_state.form_data["water_usage"] >= 0 and st.session_state.form_data["effluents"] >= 0 and st.session_state.form_data["treatment_method"] != "Select an option")
+        st.session_state.form_data["org_name"].strip() 
+        and st.session_state.form_data["industry"] != "Select an option"  
+        and st.session_state.form_data["employees"] > 0  
+        and st.session_state.form_data["electricity"] > 0  
+        and st.session_state.form_data["natural_gas"] > 0  
+        and st.session_state.form_data["fuel"] >= 0  
+        and st.session_state.form_data["waste"] > 0  
+        and 0.0 <= st.session_state.form_data["waste_recycled"] <= 100.0  
+        and st.session_state.form_data["kilometers"] >= 0  
+        and st.session_state.form_data["efficiency"] >= 0  
     )
 
     if st.button("Submit Form", disabled=not is_complete):
