@@ -14,6 +14,7 @@ os.makedirs(os.path.dirname(DATA_PATH), exist_ok=True)
 def submit_form():
     data = request.json
     try:
+        print("Received data:", data) 
         # Save data to JSON
         with open(DATA_PATH, 'r+') as f:
             try:
@@ -29,4 +30,4 @@ def submit_form():
     
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)

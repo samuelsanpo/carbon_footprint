@@ -1,0 +1,14 @@
+[
+    {
+        "org_name": "Test",
+        "industry": "IT Services",
+        "employees": 8,
+        "electricity": 250.0,
+        "natural_gas": 50.0,
+        "fuel": 150.0,
+        "waste": 30.0,
+        "waste_recycled": 15.0,
+        "kilometers": 1000.0,
+        "efficiency": 100.0
+    }
+]

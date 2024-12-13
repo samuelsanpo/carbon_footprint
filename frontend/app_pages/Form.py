@@ -1,4 +1,5 @@
 import streamlit as st
+import requests
 
 def show():
 
@@ -62,4 +63,12 @@ def show():
     )
 
     if st.button("Submit Form", disabled=not is_complete):
-        st.success("Form submitted successfully!")
+        try:
+            print(st.session_state.form_data)
+            response = requests.post("http://localhost:5000/submit", json=st.session_state.form_data)
+            if response.status_code == 200:
+                st.success("Form submitted successfully!")
+            else:
+                st.error(f"Error: {response.json().get('error', 'Unknown error')}")
+        except Exception as e:
+            st.error(f"Failed to connect to the server: {e}")
