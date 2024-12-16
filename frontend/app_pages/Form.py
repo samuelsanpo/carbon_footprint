@@ -20,6 +20,12 @@ def show():
             "efficiency": 0.0
         }
 
+    if "is_loading" not in st.session_state:
+        st.session_state.is_loading = False  
+
+    if st.session_state.is_loading:
+        st.warning("Processing... Please wait.")
+        st.stop()  
 
     # General Information Section
     st.header("General Information")
@@ -63,12 +69,29 @@ def show():
     )
 
     if st.button("Submit Form", disabled=not is_complete):
-        try:
-            print(st.session_state.form_data)
-            response = requests.post("http://localhost:5000/submit", json=st.session_state.form_data)
-            if response.status_code == 200:
-                st.success("Form submitted successfully!")
-            else:
-                st.error(f"Error: {response.json().get('error', 'Unknown error')}")
-        except Exception as e:
-            st.error(f"Failed to connect to the server: {e}")
+        st.session_state.is_loading = True
+        with st.spinner('Sending...'):
+            try:
+                print(st.session_state.form_data)
+                response = requests.post("http://localhost:5000/submit", json=st.session_state.form_data)
+                if response.status_code == 200:
+                    st.success("Form submitted successfully!")
+                    st.session_state.form_data = {
+                        "org_name": "",
+                        "industry": "Select an option",
+                        "employees": 0,
+                        "electricity": 0.0,
+                        "natural_gas": 0.0,
+                        "fuel": 0.0,
+                        "waste": 0.0,
+                        "waste_recycled": 0.0,
+                        "kilometers": 0.0,
+                        "efficiency": 0.0
+                    }
+                    st.experimental_rerun()
+                else:
+                    st.error(f"Error: {response.json().get('error', 'Unknown error')}")
+            except Exception as e:
+                st.error(f"Failed to connect to the server: {e}")
+            finally:
+                st.session_state.is_loading = False
