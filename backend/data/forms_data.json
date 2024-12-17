@@ -1,74 +1,17 @@
 [
     {
         "org_name": "Test",
-        "industry": "IT Services",
-        "employees": 8,
-        "electricity": 250.0,
-        "natural_gas": 50.0,
-        "fuel": 150.0,
+        "industry": "Manufacturing",
+        "employees": 100,
+        "electricity": 50.0,
+        "natural_gas": 25.0,
+        "fuel": 99.9,
         "waste": 30.0,
-        "waste_recycled": 15.0,
-        "kilometers": 1000.0,
-        "efficiency": 100.0
-    },
-    {
-        "org_name": "Test",
-        "industry": "IT Services",
-        "employees": 8,
-        "electricity": 250.0,
-        "natural_gas": 50.0,
-        "fuel": 150.0,
-        "waste": 30.0,
-        "waste_recycled": 15.0,
-        "kilometers": 1000.0,
-        "efficiency": 100.0
-    },
-    {
-        "org_name": "Test",
-        "industry": "IT Services",
-        "employees": 8,
-        "electricity": 250.0,
-        "natural_gas": 50.0,
-        "fuel": 150.0,
-        "waste": 30.0,
-        "waste_recycled": 15.0,
-        "kilometers": 1000.0,
-        "efficiency": 100.0
-    },
-    {
-        "org_name": "Test",
-        "industry": "Retail",
-        "employees": 98,
-        "electricity": 300.0,
-        "natural_gas": 150.0,
-        "fuel": 599.9,
-        "waste": 30.0,
-        "waste_recycled": 9.9,
-        "kilometers": 1000.0,
-        "efficiency": 100.0
-    },
-    {
-        "org_name": "",
-        "industry": "Select an option",
-        "employees": 0,
-        "electricity": 0.0,
-        "natural_gas": 0.0,
-        "fuel": 0.0,
-        "waste": 0.0,
-        "waste_recycled": 0.0,
-        "kilometers": 0.0,
-        "efficiency": 0.0
-    },
-    {
-        "org_name": "Test 3",
-        "industry": "Financial Services",
-        "employees": 50,
-        "electricity": 150.0,
-        "natural_gas": 50.0,
-        "fuel": 50.0,
-        "waste": 200.0,
-        "waste_recycled": 10.0,
+        "waste_recycled": 20.0,
         "kilometers": 100.0,
-        "efficiency": 100.0
+        "efficiency": 20.0,
+        "id": "020e9b41-fede-46a9-b912-0bb20e3c43b9",
+        "creation_date": "2024-12-17T18:34:20.277758",
+        "report_url": "reports/report_020e9b41-fede-46a9-b912-0bb20e3c43b9.pdf"
     }
 ]

@@ -46,7 +46,7 @@ def show():
     # Waste Section
     st.header("Waste")
     st.session_state.form_data["waste"] = st.number_input("Waste generated per month in kilograms (kg):", min_value=0.0, step=0.1, format="%.1f", value=st.session_state.form_data["waste"])
-    st.session_state.form_data["waste_recycled"] = st.number_input("Waste recycled or composted per month (percentage %)", min_value=0.0, max_value=100.0, step=0.1, format="%.1f", value=st.session_state.form_data["waste_recycled"])
+    st.session_state.form_data["waste_recycled"] = st.number_input("Waste recycled or composted per month (percentage %)", min_value=0.0, max_value=57.0, step=0.1, format="%.1f", value=st.session_state.form_data["waste_recycled"])
 
     # Business travel
     st.header("Business travel")
