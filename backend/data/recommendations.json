@@ -1,0 +1,195 @@
+{
+    "_comment": "The recommendations in this JSON file were generated with the assistance of an AI (ChatGPT).",
+    "recommendations": {
+        "electricity": {
+            "low": {
+                "message": "Your electricity consumption is low. Maintain your habits to keep it sustainable.",
+                "tips": [
+                    "Use energy-efficient light bulbs.",
+                    "Unplug devices when not in use.",
+                    "Consider switching to 100% renewable energy suppliers for further reductions."
+                ]
+            },
+            "moderate": {
+                "message": "Your electricity consumption is moderate. Consider improving efficiency.",
+                "tips": [
+                    "Replace standard bulbs with *LED lights* to save up to 90% energy.",
+                    "Use energy-efficient appliances.",
+                    "Unplug unused devices or use *smart power strips* to reduce phantom energy consumption."
+                ]
+            },
+            "high": {
+                "message": "Your electricity consumption is high. Take measures to reduce it.",
+                "tips": [
+                    "Perform an *energy audit* to identify high-consumption areas.",
+                    "Invest in renewable energy sources like solar panels.",
+                    "Turn off devices and lights when not needed."
+                ]
+            }
+        },
+        "gas": {
+            "low": {
+                "message": "Your gas usage is low. Keep up the good work.",
+                "tips": [
+                    "Check for leaks to ensure safety.",
+                    "Continue to monitor gas consumption."
+                ]
+            },
+            "moderate": {
+                "message": "Your gas consumption is moderate. Look for ways to optimize.",
+                "tips": [
+                    "Upgrade to efficient gas-powered appliances.",
+                    "Schedule regular maintenance of heating systems."
+                ]
+            },
+            "high": {
+                "message": "Your gas consumption is high. Take action to save energy.",
+                "tips": [
+                    "Consider alternative heating solutions.",
+                    "Improve insulation to retain heat longer.",
+                    "Inspect for potential gas leaks."
+                ]
+            }
+        },
+        "fuel": {
+            "low": {
+                "message": "Your fuel consumption is low. Great work!",
+                "tips": [
+                    "Keep up with sustainable transport choices like walking, cycling, or public transport"
+                ]
+            },
+            "moderate": {
+                "message": "Your fuel consumption is moderate. You can improve further.",
+                "tips": [
+                    "Use apps to plan efficient routes to save fuel.",
+                    "Carpool with colleagues to reduce vehicle usage. "
+                ]
+            },
+            "high": {
+                "message": "Your fuel consumption is high. Take steps to reduce it.",
+                "tips": [
+                    "Consider transitioning to *electric or hybrid vehicles* to reduce carbon emissions",
+                    "Increase use of public transportation for longer trips.",
+                    "Work from home or combine errands to reduce overall travel."
+                ]
+            }
+        },
+        "waste": {
+            "low": {
+                "message": "Your waste generation is low. Great work!",
+                "tips": [
+                    "Maintain responsible waste habits. Encourage neighbors or employees to adopt similar practices."
+                ]
+            },
+            "moderate": {
+                "message": "Your waste generation is moderate. You can improve further.",
+                "tips": [
+                    "Separate and recycle waste: sort materials like paper, plastic, glass, and metal.",
+                    "Reduce single-use plastics by switching to reusable bags, bottles, and containers."
+                ]
+            },
+            "high": {
+                "message": "Your waste generation is high. Take steps to reduce it.",
+                "tips": [
+                    "Implement a zero wasteplan: identify major sources of waste and reduce packaging.",
+                    "Partner with local recycling programs to improve waste management.",
+                    "Reuse or repurpose items instead of discarding them."
+                ]
+            }
+        },
+        "recycling": {
+            "low": {
+                "message": "Your recycling rate is low, take action to improve it.",
+                "tips": [
+                    "Educate household members or employees on the importance of recycling.",
+                    "Use labeled bins for different types of recyclable waste."
+                ]
+            },
+            "moderate": {
+                "message": "Your recycling rate is moderate. You can improve further.",
+                "tips": [
+                    "Increase efforts by composting food scraps and garden waste.",
+                    "Partner with recycling centers to ensure materials are being processed properly."
+                ]
+            },
+            "high": {
+                "message": "Your recycling rate is high. Great work!",
+                "tips": [
+                    "Consider going *zero waste* by reducing unnecessary purchases and packaging.",
+                    "Share best practices with others to encourage sustainable habits in your community."
+                ]
+            }
+        },
+        "travel": {
+            "low": {
+                "message": "The value of kilometers traveled per year for business purposes is low. Great work!",
+                "tips": [
+                    "Promote continued use of virtual meetings and alternative transport methods."
+                ]
+            },
+            "moderate": {
+                "message": "The value of kilometers traveled per year for business purposes is moderate. You can improve further.",
+                "tips": [
+                    "Prioritize *train or bus travel* for regional trips instead of flights to reduce emissions.",
+                    "Offset emissions through *carbon offset programs* like tree planting or clean energy investments."
+                ]
+            },
+            "high": {
+                "message": "The value of kilometers traveled per year for business purposes is. Take steps to reduce it.",
+                "tips": [
+                    "Replace non-essential trips with *virtual meetings* (e.g., Zoom, Teams).",
+                    "Encourage use of *low-emission vehicles* or electric cars for business trips.",
+                    "Track and reduce travel emissions by setting annual targets for reductions."
+                ]
+            }
+        },
+        "fuelEfficiency": {
+            "low": {
+                "message": "Fuel consumption of vehicles used for business trips is low. Great work!",
+                "tips": [
+                    "Promote continued use of fuel-efficient vehicles and sustainable transport options."
+                ]
+            },
+            "moderate": {
+                "message": "Fuel consumption of vehicles used for business trips is moderate. You can improve further.",
+                "tips": [
+                    "Encourage eco-driving habits to optimize fuel efficiency.",
+                    "Use route optimization tools to minimize kilometers traveled."
+                ]
+            },
+            "high": {
+                "message": "Fuel consumption of vehicles used for business trips is high. Take steps to reduce it.",
+                "tips": [
+                    "Replace old vehicles with more fuel-efficient models or *hybrid/electric cars*.",
+                    "Improve vehicle maintenance: regular servicing, tire checks, and engine tuning."
+                ]
+            }
+        },
+        "co2": {
+            "low": {
+                "message": "Our carbon footprint calculator has concluded that your organization generates a low number of KG of CO2 each month. Great work!",
+                "tips": [
+                    "Adopt circular economy principles by reusing and recycling resources.",
+                    "Commit to environmental certifications, such as ISO 14001, to formalize sustainability efforts.",
+                    "Share sustainability achievements transparently to inspire stakeholders and peers."
+                ]
+            },
+            "moderate": {
+                "message": "Our carbon footprint calculator has concluded that your organization generates a moderate number of KG of CO2 each month. You can improve further.",
+                "tips": [
+                    "Adopt circular economy principles by reusing and recycling resources.",
+                    "Commit to environmental certifications, such as ISO 14001, to formalize sustainability efforts.",
+                    "Share sustainability achievements transparently to inspire stakeholders and peers."
+                ]
+            },
+            "high": {
+                "message": "Our carbon footprint calculator has concluded that your organization generates a high number of KG of CO2 each month. Take steps to reduce it.",
+                "tips": [
+                    "Adopt circular economy principles by reusing and recycling resources.",
+                    "Commit to environmental certifications, such as ISO 14001, to formalize sustainability efforts.",
+                    "Share sustainability achievements transparently to inspire stakeholders and peers."
+                ]
+            }
+        }
+    }
+}
