@@ -6,17 +6,17 @@ def calculate_energy_emissions(electricity, gas, fuel):
     fuel_emissions = fuel * 12 * 2.32
     
     emissions = electricity_emissions + gas_emissions + fuel_emissions
-    return emissions
+    return round(emissions,2)
 
 def calculate_waste_emissions(waste, recycling_percentage):
     recycling_percentage_decimal = recycling_percentage / 100  
     emissions = waste * 12 * (0.57-recycling_percentage_decimal)
-    return emissions
+    return round(emissions,2)
 
 def calculate_travel_emissions(kms, fuel_efficiency):
     fuel_consumption = kms / fuel_efficiency
     emissions = fuel_consumption * 2.31
-    return emissions
+    return round(emissions,2)
 
 
 def calculate_emissions(electricity, gas, fuel, 
@@ -105,7 +105,7 @@ def get_recommendations(value, key):
             "moderate": 5000,   # km/año
             "high": float("inf")
         },
-        "fuelEfficiency": {
+        "efficiency": {
             "low": 10,          # L/100 km
             "moderate": 7,      # L/100 km
             "high": float("inf")

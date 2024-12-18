@@ -17,3 +17,8 @@ source env/bin/activate
 
 Windows
 env\Scripts\activate
+
+pip install streamlit
+pip install streamlit-extras
+pip install panda
+pip install matpilob

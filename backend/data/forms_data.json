@@ -1,17 +1,110 @@
 [
     {
-        "org_name": "Test",
-        "industry": "Manufacturing",
-        "employees": 100,
-        "electricity": 50.0,
-        "natural_gas": 25.0,
-        "fuel": 99.9,
-        "waste": 30.0,
-        "waste_recycled": 20.0,
-        "kilometers": 100.0,
+        "org_name": "IT Company",
+        "industry": "IT Services",
+        "employees": 500,
+        "electricity": 2000.0,
+        "natural_gas": 1000.0,
+        "fuel": 500.0,
+        "waste": 200.0,
+        "waste_recycled": 25.0,
+        "kilometers": 1000.0,
         "efficiency": 20.0,
-        "id": "020e9b41-fede-46a9-b912-0bb20e3c43b9",
-        "creation_date": "2024-12-17T18:34:20.277758",
-        "report_url": "reports/report_020e9b41-fede-46a9-b912-0bb20e3c43b9.pdf"
+        "id": "e25b934d-5ef1-4952-b538-736d81271cac",
+        "creation_date": "2024-12-18T14:08:38.585060",
+        "report_url": "reports/report_e25b934d-5ef1-4952-b538-736d81271cac.pdf",
+        "report_data": {
+            "organization": {
+                "org_name": "IT Company",
+                "industry": "IT Services",
+                "employees": 500
+            },
+            "emissions": {
+                "energy_emissions": 13995.6,
+                "waste_emissions": 768.0,
+                "travel_emissions": 115.5,
+                "total_emissions": 14879.1
+            },
+            "co2_recommendation": {
+                "message": "Our carbon footprint calculator has concluded that your organization generates a high number of KG of CO2 each month. Take steps to reduce it.",
+                "tips": [
+                    "Adopt circular economy principles by reusing and recycling resources.",
+                    "Commit to environmental certifications, such as ISO 14001, to formalize sustainability efforts.",
+                    "Share sustainability achievements transparently to inspire stakeholders and peers."
+                ]
+            }
+        }
+    },
+    {
+        "org_name": "Marketing company",
+        "industry": "Other",
+        "employees": 250,
+        "electricity": 1500.0,
+        "natural_gas": 500.0,
+        "fuel": 250.0,
+        "waste": 200.0,
+        "waste_recycled": 40.0,
+        "kilometers": 500.0,
+        "efficiency": 10.0,
+        "id": "427c5023-106f-4592-a53f-773e0123ff22",
+        "creation_date": "2024-12-18T14:09:51.159165",
+        "report_url": "reports/report_427c5023-106f-4592-a53f-773e0123ff22.pdf",
+        "report_data": {
+            "organization": {
+                "org_name": "Marketing company",
+                "industry": "Other",
+                "employees": 250
+            },
+            "emissions": {
+                "energy_emissions": 7000.8,
+                "waste_emissions": 408.0,
+                "travel_emissions": 115.5,
+                "total_emissions": 7524.3
+            },
+            "co2_recommendation": {
+                "message": "Our carbon footprint calculator has concluded that your organization generates a high number of KG of CO2 each month. Take steps to reduce it.",
+                "tips": [
+                    "Adopt circular economy principles by reusing and recycling resources.",
+                    "Commit to environmental certifications, such as ISO 14001, to formalize sustainability efforts.",
+                    "Share sustainability achievements transparently to inspire stakeholders and peers."
+                ]
+            }
+        }
+    },
+    {
+        "org_name": "Transport company",
+        "industry": "Retail",
+        "employees": 199,
+        "electricity": 500.0,
+        "natural_gas": 1000.0,
+        "fuel": 2500.0,
+        "waste": 150.0,
+        "waste_recycled": 15.0,
+        "kilometers": 5000.0,
+        "efficiency": 15.0,
+        "id": "1cbeb38b-df97-4bb7-b122-b1b6e8f10b68",
+        "creation_date": "2024-12-18T14:10:42.528757",
+        "report_url": "reports/report_1cbeb38b-df97-4bb7-b122-b1b6e8f10b68.pdf",
+        "report_data": {
+            "organization": {
+                "org_name": "Transport company",
+                "industry": "Retail",
+                "employees": 199
+            },
+            "emissions": {
+                "energy_emissions": 69666.6,
+                "waste_emissions": 756.0,
+                "travel_emissions": 770.0,
+                "total_emissions": 71192.6
+            },
+            "co2_recommendation": {
+                "message": "Our carbon footprint calculator has concluded that your organization generates a high number of KG of CO2 each month. Take steps to reduce it.",
+                "tips": [
+                    "Adopt circular economy principles by reusing and recycling resources.",
+                    "Commit to environmental certifications, such as ISO 14001, to formalize sustainability efforts.",
+                    "Share sustainability achievements transparently to inspire stakeholders and peers."
+                ]
+            }
+        }
     }
 ]

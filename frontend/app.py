@@ -1,35 +1,22 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+from streamlit_extras.switch_page_button import switch_page
 
 st.set_page_config(
     page_title="Carbon Footprint",
     page_icon="🌳", 
 )
 
-# Sidebar with streamlit_option_menu
-with st.sidebar:
-    page = option_menu(
-        menu_title="Navigation",
-        options=["Home", "Form", "Reports", "Analysis"],
-        icons=["house", "clipboard", "bar-chart", "search"],
-        default_index=0,
-        menu_icon="null",  
-    )
+if "report_id" in st.session_state:
+    del st.session_state["report_id"]
 
-# Load pages dynamically, app_pages is used as a folder for views to 
-# prevent python from creating the navigation menu by default, since streamlit_option_menu is used for navigation
-if page == "Home":
-    import app_pages.Home as Home
-    Home.show()
-elif page == "Form":
-    import app_pages.Form as Form
-    Form.show()
-elif page == "Reports":
-    import app_pages.Reports as Reports
-    Reports.show()
-elif page == "Analysis":
-    import app_pages.Analysis as Analysis
-    Analysis.show()
+st.title("Carboon footprint")
+
+st.write("Welcome to the carbon footprint calculator for your organization, it is very important that we start to care about our planet so we must measure the damage we are causing, with the following video we want you to enter into context with the idea of carbon footprint, after watching it please proceed to the form, review your results and evaluate the possible improvements that we recommend.")
+
+st.video("https://www.youtube.com/watch?v=a9yO-K8mwL0")
+
+if st.button("Take the form"):
+    switch_page("Form")
 
  #footer
 footer = """

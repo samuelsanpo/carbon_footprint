@@ -135,7 +135,7 @@
                 ]
             },
             "high": {
-                "message": "The value of kilometers traveled per year for business purposes is. Take steps to reduce it.",
+                "message": "The value of kilometers traveled per year for business purposes is high. Take steps to reduce it.",
                 "tips": [
                     "Replace non-essential trips with *virtual meetings* (e.g., Zoom, Teams).",
                     "Encourage use of *low-emission vehicles* or electric cars for business trips.",
@@ -143,7 +143,7 @@
                 ]
             }
         },
-        "fuelEfficiency": {
+        "efficiency": {
             "low": {
                 "message": "Fuel consumption of vehicles used for business trips is low. Great work!",
                 "tips": [
