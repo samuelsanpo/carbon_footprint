@@ -78,13 +78,15 @@ e. Run the project.
 
 In case you have any problems with the libraries, these are the libraries used in each project.
 
-----frontend
+-frontend
+
 pip install streamlit
 pip install streamlit-extras
 pip install panda
 pip install matpilob
 
---backend
+-backend
+
 pip install flask
 pip install fpdf
 
