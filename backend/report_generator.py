@@ -57,7 +57,7 @@ def generate_report(data, file_path):
     pdf.ln(5)
 
     total_emissions_value = emissions_data['total_emissions']
-    #Here I call get recommendations for the first time to bring the recommendations regarding the carbon footprint value.
+    #Here I call get recommendations co2 to bring the recommendations regarding the carbon footprint value.
     co2_recommendation = get_co2_recommendations(total_emissions_value)
 
     pdf.set_font("Arial", size=14, style='B')
@@ -94,7 +94,7 @@ def generate_report(data, file_path):
         ("Fuel Efficiency", data.get("efficiency", 0.0), "efficiency"),
     ]
 
-    #I call recommendations again to get the recommendations for each individual item.
+    #I call get the recommendations for each individual item.
     for metric_name, value, recommendation_key in metrics:
         pdf.set_font("Arial", size=10)
         pdf.cell(200, 10, txt=f"{metric_name}: {value}", ln=True)
