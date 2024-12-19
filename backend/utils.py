@@ -1,5 +1,6 @@
 import json
 
+#Below are the individual emissions of energy, waste and travel, which I have rounded up so that the values ​​are easier to visualize.
 def calculate_energy_emissions(electricity, gas, fuel):
     electricity_emissions = electricity * 12 * 0.0005
     gas_emissions = gas * 12 * 0.0053
@@ -18,7 +19,7 @@ def calculate_travel_emissions(kms, fuel_efficiency):
     emissions = fuel_consumption * 2.31
     return round(emissions,2)
 
-
+#Here I calculate the total emissions with the total sum of the other.
 def calculate_emissions(electricity, gas, fuel, 
                               waste, recycling_percentage, 
                               kms, fuel_efficiency):
@@ -56,6 +57,11 @@ def get_co2_recommendations(total_emissions):
     co2_recommendation = recommendations['recommendations']['co2'][level]
     return co2_recommendation
 
+
+
+# This is a dynamic function that returns the recommendations that you create in the recommendations json, 
+# then depending on the key and the threshold in which the sent value is found, it returns certain recommendations 
+# to the user that I mapped in the report.
 def get_recommendations(value, key):
 
     with open("data/recommendations.json", 'r') as f:

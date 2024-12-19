@@ -5,7 +5,7 @@ st.set_page_config(
     page_title="Carbon Footprint",
     page_icon="🌳", 
 )
-
+# Home page, introduction to the tool for users.
 if "report_id" in st.session_state:
     del st.session_state["report_id"]
 

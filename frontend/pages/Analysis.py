@@ -11,6 +11,10 @@ st.set_page_config(
 if "report_id" in st.session_state:
     del st.session_state["report_id"]
 
+# On this analysis page I also use the method that brings all the records, with this information, 
+# I point out the company with the most and least carbon footprint, 
+# I generate tables and graphs with the help of the matpotlib and pandas libraries, 
+# so the idea is that as the records increase they can be used to find trends and analyze the group information obtained.
 
 st.title("Analysis")
 

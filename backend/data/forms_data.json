@@ -106,5 +106,41 @@
                 ]
             }
         }
+    },
+    {
+        "org_name": "Food company",
+        "industry": "Logistic",
+        "employees": 400,
+        "electricity": 1500.0,
+        "natural_gas": 2500.0,
+        "fuel": 100.0,
+        "waste": 600.0,
+        "waste_recycled": 20.0,
+        "kilometers": 200.0,
+        "efficiency": 10.0,
+        "id": "7d275b23-88f1-46dc-8c7a-65c32ebd40cb",
+        "creation_date": "2024-12-19T15:44:35.716459",
+        "report_url": "reports/report_7d275b23-88f1-46dc-8c7a-65c32ebd40cb.pdf",
+        "report_data": {
+            "organization": {
+                "org_name": "Food company",
+                "industry": "Logistic",
+                "employees": 400
+            },
+            "emissions": {
+                "energy_emissions": 2952.0,
+                "waste_emissions": 2664.0,
+                "travel_emissions": 46.2,
+                "total_emissions": 5662.2
+            },
+            "co2_recommendation": {
+                "message": "Our carbon footprint calculator has concluded that your organization generates a high number of KG of CO2 each month. Take steps to reduce it.",
+                "tips": [
+                    "Adopt circular economy principles by reusing and recycling resources.",
+                    "Commit to environmental certifications, such as ISO 14001, to formalize sustainability efforts.",
+                    "Share sustainability achievements transparently to inspire stakeholders and peers."
+                ]
+            }
+        }
     }
 ]

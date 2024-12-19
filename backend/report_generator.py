@@ -2,6 +2,8 @@ from fpdf import FPDF
 import json
 from utils import calculate_emissions, get_co2_recommendations, get_recommendations
 
+#In this page I create the report with the fpdf library, I assign the different fields with the structure, 
+# it is a simple structure but it contains the required information.
 def generate_report(data, file_path):
     pdf = FPDF()
     pdf.add_page()
@@ -36,6 +38,7 @@ def generate_report(data, file_path):
     pdf.cell(200, 10, txt="Results", ln=True)
     pdf.ln(5)
 
+    #I use the emissions calculation method that returns the emissions values ​​that I use later.
     emissions_data = calculate_emissions(
         data.get("electricity", 0.0),
         data.get("natural_gas", 0.0),
@@ -54,6 +57,7 @@ def generate_report(data, file_path):
     pdf.ln(5)
 
     total_emissions_value = emissions_data['total_emissions']
+    #Here I call get recommendations for the first time to bring the recommendations regarding the carbon footprint value.
     co2_recommendation = get_co2_recommendations(total_emissions_value)
 
     pdf.set_font("Arial", size=14, style='B')
@@ -90,6 +94,7 @@ def generate_report(data, file_path):
         ("Fuel Efficiency", data.get("efficiency", 0.0), "efficiency"),
     ]
 
+    #I call recommendations again to get the recommendations for each individual item.
     for metric_name, value, recommendation_key in metrics:
         pdf.set_font("Arial", size=10)
         pdf.cell(200, 10, txt=f"{metric_name}: {value}", ln=True)

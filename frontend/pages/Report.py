@@ -11,7 +11,11 @@ BACKEND_URL = "http://localhost:5000"
 
 report_id = st.session_state.get("report_id", None)
 report_url = f"{BACKEND_URL}/reports/report_{report_id}.pdf"
-
+#Here my initial idea was to show an iframe with the pdf file to the user, plus the option to download, 
+# but to consume the iframe required to change my method in flask to https which would entail the generation 
+# of the ssl certificate and a lot of extra work so as an alternative I decided to modify the post method to save 
+# the most important information of the report with which I perform the preview of the information and then I have 
+# the download button that consumes the method that allows me to download the pdf file saved in the mini service with flask.
 if report_id:
     st.title("Report")
     try:

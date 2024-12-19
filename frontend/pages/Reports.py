@@ -19,7 +19,9 @@ BACKEND_URL = "http://localhost:5000"
 def format_date(date_str):
     date_obj = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S.%f")
     return date_obj.strftime("%B %d, %Y, %I:%M %p") 
-# Get all forms
+# In this method I consume a get that brings me all the forms records and map them to show title,
+#  a date that I format with the function above and the link to enter the report as such, also when 
+# I send the report I assign the id of the report to the session.
 try:
     response = requests.get(f"{BACKEND_URL}/forms")
     if response.status_code == 200:
