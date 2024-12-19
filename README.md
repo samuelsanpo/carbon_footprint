@@ -14,7 +14,9 @@ Before starting, verify that you have Python installed on your computer.
 1) Create environment for backend 
 
 a. Locate the project folder in the console and with the cd command, move to backend.
-   -cd backend
+
+   cd backend
+
 b. Install the virtual environment.
 
     -For Mac OS /Linux
@@ -32,16 +34,20 @@ c.Activate the environment
     env\Scripts\activate
 
 d.Install the libraries listed in the requirements file.
+
     pip install -r requirements.txt
 
 e. Run the project it will run automatically on port 5000
+
     python app.py
 
 
 2)Create environmet for frontend
 
 a. Locate the project folder in the console and with the cd command, move to frontend.
-   -cd frontend
+
+   cd frontend
+
 b. Install the virtual environment.
 
     -For Mac OS /Linux
@@ -59,9 +65,11 @@ c.Activate the environment
     env\Scripts\activate
 
 d.Install the libraries listed in the requirements file.
+
     pip install -r requirements.txt
 
 e. Run the project.
+
     streamlit run app.py
 
 
